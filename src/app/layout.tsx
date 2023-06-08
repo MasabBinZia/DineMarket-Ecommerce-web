@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header/>
         {/* HomePage */}
-        <main className='px-8'>
+        <main className=''>
         {children}
         </main></body>
     </html>

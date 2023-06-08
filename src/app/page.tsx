@@ -1,12 +1,11 @@
 import Hero from '@/views/Hero'
-import Image from 'next/image'
+import ProductList from '@/views/ProductList'
 
 export default function Home() {
   return (
     <>
     <Hero/>
-    
-
+    <ProductList/>
     </>
   )
 }

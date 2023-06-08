@@ -6,10 +6,13 @@ import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <section className='flex flex-col lg:flex-row gap-y-10 py-6 '>
+        <section className='flex flex-col lg:flex-row gap-y-10 py-6 px-8 '>
             {/* Left Side */}
             <div className='flex-1'>
-                <Badge className='py-3 text-lg px-6 rounded-lg bg-blue-200 text-blue-700 '>Sale 70%</Badge>
+                <div>
+                    <span className='text-blue-600'>PRODUCTS</span>
+                </div>
+                <Badge className='py-3 text-lg px-6 rounded-lg bg-blue-200 text-blue-700 h-10 '>Sale 70%</Badge>
                 <h1 className=" mt-6 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
                     An Industrial Take on Streetwear
                 </h1>
@@ -18,8 +21,6 @@ const Hero = () => {
                 </p>
                 <Button className='bg-black h-12 px-8 mt-4'>Start Shopping</Button>
             </div>
-
-
             {/* Right Side */}
             <div className='flex-1'>
                 <Image src={heroImg} alt='heroImg' />
