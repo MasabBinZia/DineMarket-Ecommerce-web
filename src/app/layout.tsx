@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header/>
         {/* HomePage */}
-        <main className=''>
+        <main className='py-12 ml-20'>
         {children}
         </main></body>
     </html>
