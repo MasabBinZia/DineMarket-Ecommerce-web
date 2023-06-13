@@ -2,6 +2,7 @@ import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import heroImg from '/public/heroImg.webp'
+import { ShoppingCart } from "lucide-react"
 import Image from 'next/image'
 const Hero = () => {
     return (
@@ -15,7 +16,9 @@ const Hero = () => {
                 <p className="leading-7 [&:not(:first-child)]:mt-6">
                     Anyone can beat you but no one can beat your outfit as long as you<br /> wear Dine outfits.
                 </p>
-                <Button className='bg-black h-12 px-8 mt-4'>Start Shopping</Button>
+                <Button className='bg-black h-12 px-8 mt-4'>
+                    <ShoppingCart className='mr-2'/>
+                    Start Shopping</Button>
             </div>
             {/* Right Side */}
             <div className='flex-1'>
