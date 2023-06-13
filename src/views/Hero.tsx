@@ -2,6 +2,10 @@ import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import heroImg from '/public/heroImg.webp'
+import Featured1 from '/public/Featured1.webp'
+import Featured2 from '/public/Featured2.webp'
+import Featured3 from '/public/Featured3.webp'
+import Featured4 from '/public/Featured4.webp'
 import { ShoppingCart } from "lucide-react"
 import Image from 'next/image'
 const Hero = () => {
@@ -19,6 +23,12 @@ const Hero = () => {
                 <Button className='bg-black h-12 px-8 mt-4'>
                     <ShoppingCart className='mr-2'/>
                     Start Shopping</Button>
+                    <div className='flex space-x-8 mt-12'>
+                        <Image src={Featured1} alt='ima'/>
+                        <Image src={Featured2} alt='ima'/>
+                        <Image src={Featured3} alt='ima'/>
+                        <Image src={Featured4} alt='ima'/>
+                    </div>
             </div>
             {/* Right Side */}
             <div className='flex-1'>
