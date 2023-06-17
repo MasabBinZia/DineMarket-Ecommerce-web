@@ -10,6 +10,7 @@ import { ShoppingCart } from "lucide-react"
 import Image from 'next/image'
 const Hero = () => {
     return (
+        <div className='mt-8'>
         <section className='flex flex-col lg:flex-row gap-y-10 py-6 px-12 '>
             {/* Left Side */}
             <div className='flex-1'>
@@ -23,7 +24,7 @@ const Hero = () => {
                 <Button className='bg-black h-12 px-8 mt-4'>
                     <ShoppingCart className='mr-2'/>
                     Start Shopping</Button>
-                    <div className='flex space-x-8 mt-12'>
+                    <div className='flex space-x-4 mt-16 items-center'>
                         <Image src={Featured1} alt='ima'/>
                         <Image src={Featured2} alt='ima'/>
                         <Image src={Featured3} alt='ima'/>
@@ -35,6 +36,7 @@ const Hero = () => {
                 <Image src={heroImg} alt='heroImg' />
             </div>
         </section>
+        </div>
     )
 }
 
