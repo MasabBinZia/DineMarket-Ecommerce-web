@@ -32,7 +32,7 @@ const Hero = () => {
                     </div>
             </div>
             {/* Right Side */}
-            <div className='flex-1'>
+            <div className=' hidden md:flex bg-orange-100 rounded-full'>
                 <Image src={heroImg} alt='heroImg' />
             </div>
         </section>

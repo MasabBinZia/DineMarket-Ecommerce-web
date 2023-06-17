@@ -54,13 +54,19 @@ const Header = () => {
             All Products
           </Link>
         </div>
-        <div
-          className={`${isSearchOpen ? 'flex' : 'hidden'
-            } md:flex items-center pt-0`}
-        >
-          <Search className="bg-white rounded-l" />
-          <Input type="search" placeholder="Search Here!" className='w-60 h-6 rounded' />
-        </div>
+        <div className={`${isSearchOpen ? 'flex' : 'hidden'} md:flex items-center pt-0`}>
+  <div className="relative flex">
+    <input
+      type="search"
+      placeholder="Search Here!"
+      className="w-60 h-6 pl-8 pr-4 rounded"
+    />
+    <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
+      <Search className="text-gray-500" size={18} />
+    </div>
+  </div>
+</div>
+
         <div className={`hidden md:flex h-10 w-10 rounded-full bg-gray-200 justify-center items-center cursor-pointer`}
         >
           <ShoppingCart />
