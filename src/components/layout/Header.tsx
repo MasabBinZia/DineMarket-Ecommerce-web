@@ -39,7 +39,7 @@ const Header = () => {
           )}
         </div>
         <div
-          className={`hidden md:flex flex-col md:flex-row gap-x-10 `}
+          className={`hidden md:flex flex-col md:flex-row gap-x-10`}
         >
           <Link href={"/"} className='text-lg'>
             Females
@@ -55,61 +55,74 @@ const Header = () => {
           </Link>
         </div>
         <div className={`${isSearchOpen ? 'flex' : 'hidden'} md:flex items-center pt-0`}>
-  <div className="relative flex">
-    <input
-      type="search"
-      placeholder="Search Here!"
-      className="w-60 h-6 pl-8 pr-4 rounded"
-    />
-    <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
-      <Search className="text-gray-500" size={18} />
-    </div>
-  </div>
-</div>
-
-        <div className={`hidden md:flex h-10 w-10 rounded-full bg-gray-200 justify-center items-center cursor-pointer`}
-        >
+          <div className="relative flex">
+            <input
+              type="search"
+              placeholder="Search Here!"
+              className="w-60 h-6 pl-8 pr-4 rounded"
+            />
+            <div className="absolute left-2 top-1/2 transform -translate-y-1/2">
+              <Search className="text-gray-500" size={18} />
+            </div>
+          </div>
+        </div>
+        <div className={`hidden md:flex h-10 w-10 rounded-full bg-gray-200 justify-center items-center cursor-pointer`}>
           <ShoppingCart />
         </div>
-       {/* Mobile Devices */}
-<div
-  className={`${isMenuOpen
-    ? "flex lg:hidden flex-col w-full h-screen items-center fixed top-0 left-0 z-[100] bg-white px-5 "
-    : "flex lg:hidden flex-col w-full h-screen items-center fixed top-[-100%] left-0 z-[100] bg-white px-5 "
-  }`}
->
-  <div className='flex justify-between items-center w-full h-20 flex-col'>
-    <div className='flex items-center'>
-      {isMenuOpen ? (
-        <X
-          className='text-gray-500 cursor-pointer'
-          size={24}
-          onClick={handleMenuToggle}
-        />
-      ) : (
-        <Menu
-          className='text-gray-500 cursor-pointer'
-          size={24}
-          onClick={handleMenuToggle}
-        />
-      )}
-      <div
-        className={`navlinks ${isMenuOpen ? 'flex' : 'hidden'} flex flex-col space-y-6`}
-      >
-        <Link href={"/"} className='text-lg'>Females</Link>
-        <Link href={"/"} className='text-lg'>Males</Link>
-        <Link href={"/"} className='text-lg'>Kids</Link>
-        <Link href={"/"} className='text-lg'>All Products</Link>
-      </div>
-    </div>
-    <div
-      className={` ${isMenuOpen ? 'flex' : 'hidden'} mt-52  flex-col  gap-5 flex h-10 w-10 rounded-full bg-gray-200 justify-center items-center cursor-pointer`}
-    >
-      <ShoppingCart />
-    </div>
-  </div>
-</div>
-
+        {/* Mobile Devices */}
+        <div
+          className={`${isMenuOpen
+            ? "fixed inset-0 z-50 bg-white transition-opacity duration-300 ease-in-out"
+            : "hidden"
+          }`}
+        >
+          <div className="flex justify-between items-center h-16 px-4 sm:px-6">
+            <div>
+              <Image src={logo} alt='logo' className='w-32' />
+            </div>
+            <div className="md:hidden">
+              {isMenuOpen ? (
+                <X
+                  className='text-gray-500 cursor-pointer'
+                  size={24}
+                  onClick={handleMenuToggle}
+                />
+              ) : (
+                <Menu
+                  className='text-gray-500 cursor-pointer'
+                  size={24}
+                  onClick={handleMenuToggle}
+                />
+              )}
+            </div>
+          </div>
+          <div
+            className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white`}
+          >
+            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+              Females
+            </Link>
+            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+              Males
+            </Link>
+            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+              Kids
+            </Link>
+            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+              All Products
+            </Link>
+          </div>
+          <div className="px-5 py-4 border-t border-gray-200">
+            <div className="flex items-center">
+              <div className="flex-shrink-0">
+                <ShoppingCart className='h-6 w-6 text-gray-500' />
+              </div>
+              <div className="ml-3">
+                <p className="text-base font-medium text-gray-700">Cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
   );
