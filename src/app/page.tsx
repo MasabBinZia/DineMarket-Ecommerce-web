@@ -1,7 +1,7 @@
-import Hero from '@/components/Hero'
+import Hero from '@/views/Hero'
 import Jewellery from '@/components/Jewellery'
 import Newslatter from '@/components/NewsLatter'
-import ProductList from '@/components/ProductList'
+import ProductList from '@/views/ProductList'
 
 export default function Home() {
   return (

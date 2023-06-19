@@ -21,7 +21,9 @@ const Header = () => {
       {/* Large Devices */}
       <div className='flex justify-between items-center mt-8 mx-4 sm:mx-8 md:mx-16 lg:mx-32'>
         <div className='logo cursor-pointer'>
+          <Link href={"/"}>
           <Image src={logo} alt='logo' className='w-40' />
+          </Link>
         </div>
         <div className='md:hidden'>
           {isMenuOpen ? (
@@ -41,16 +43,16 @@ const Header = () => {
         <div
           className={`hidden md:flex flex-col md:flex-row gap-x-10`}
         >
-          <Link href={"/"} className='text-lg'>
+          <Link href={"Category/female"} className='text-lg'>
             Females
           </Link>
-          <Link href={"/"} className='text-lg'>
+          <Link href={"Category/male"} className='text-lg'>
             Males
           </Link>
-          <Link href={"/"} className='text-lg'>
+          <Link href={"Category/kids"} className='text-lg'>
             Kids
           </Link>
-          <Link href={"/"} className='text-lg'>
+          <Link href={"/Products"} className='text-lg'>
             All Products
           </Link>
         </div>
@@ -108,7 +110,7 @@ const Header = () => {
             <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
               Kids
             </Link>
-            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"/Products"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
               All Products
             </Link>
           </div>

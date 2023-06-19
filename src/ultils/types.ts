@@ -5,5 +5,5 @@ import { StaticImageData } from "next/image";
     name:string,
     price:number,
     category:string,
-    image:string | StaticImageData,
+    image:StaticImageData,
  } 
