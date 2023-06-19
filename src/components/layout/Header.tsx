@@ -101,13 +101,13 @@ const Header = () => {
           <div
             className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white`}
           >
-            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"Category/female"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
               Females
             </Link>
-            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"Category/male"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
               Males
             </Link>
-            <Link href={"/"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"Category/kids"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
               Kids
             </Link>
             <Link href={"/Products"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>

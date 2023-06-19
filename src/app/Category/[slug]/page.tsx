@@ -23,6 +23,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             price={products.price}
             img={products.image} 
             category={products.category}
+            id={products.id}
             />
         )):<p>No Products Found</p>
       }
