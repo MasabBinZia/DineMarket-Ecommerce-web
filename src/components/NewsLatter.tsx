@@ -9,7 +9,7 @@ const Newslatter = () => {
             <p className="max-w-[16rem] text-lg font-medium">Get the latest information and promo offers directly</p>
             <div className="flex gap-4 flex-wrap items-center justify-center ">
                 <Input type="text" className="border border-gray-600 py-1 px-2 md:px-4 flex flex-grow w-80" placeholder="Input email address" />
-                <Button>Get Started </Button>
+                <Button className="bg-black">Get Started </Button>
             </div>
         </div>
     )
