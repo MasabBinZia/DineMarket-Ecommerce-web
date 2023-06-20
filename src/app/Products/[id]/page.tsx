@@ -17,7 +17,7 @@ export default function Page({ params }: { params: { id: string } }) {
         {
           result.length > 0 ? result.map((products) => (
             <div key={products.id} className="flex justify-between gap-6">
-              <div><Image src={products.image} alt={products.name} className="" />
+              <div><Image src={products.image} alt={products.name} className="w-96" />
               </div>
               <div>
                 Product Details
