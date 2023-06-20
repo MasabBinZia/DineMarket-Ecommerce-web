@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import logo from '/public/logo.webp';
 import Link from 'next/link';
-import { Input } from "../ui/input";
-import { ShoppingCart } from "lucide-react";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search,ShoppingCart } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,6 +13,10 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsSearchOpen(false);
   };
+   const handleCategoryClick = () => {
+    setIsMenuOpen(false);
+  };
+
 
   return (
     <nav>
@@ -101,16 +103,16 @@ const Header = () => {
           <div
             className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white`}
           >
-            <Link href={"Category/female"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"Category/female"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50' onClick={handleCategoryClick}>
               Females
             </Link>
-            <Link href={"Category/male"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"Category/male"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50' onClick={handleCategoryClick}>
               Males
             </Link>
-            <Link href={"Category/kids"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"Category/kids"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50' onClick={handleCategoryClick}>
               Kids
             </Link>
-            <Link href={"/Products"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50'>
+            <Link href={"/Products"} className='block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50' onClick={handleCategoryClick} >
               All Products
             </Link>
           </div>
