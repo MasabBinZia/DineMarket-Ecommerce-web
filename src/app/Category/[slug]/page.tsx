@@ -25,7 +25,7 @@ export default function Page({ params }: { params: { slug: string } }) {
             category={products.category}
             id={products.id}
             />
-        )):<p>No Products Found</p>
+        )):<p className="text-3xl font-bold">No Products Found</p>
       }
   
   </div>

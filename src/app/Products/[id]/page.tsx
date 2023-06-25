@@ -5,30 +5,44 @@ const getProductsDetail = (id: number | string) => {
   return products.filter((product) => product.id == id)
 };
 
+const sizes = ["xs", "sm", "md", "lg", "xl"];
+
 
 export default function Page({ params }: { params: { id: string } }) {
   const result = getProductsDetail(params.id);
   return (
-    <div className="mt-8">
-      {/* <div className="text-center space-y-3">
-        <h3 className="text-3xl text-gray-800 font-bold capitalize">{params.id}</h3>
-      </div> */}
-      <div className='flex flex-wrap md:flex-row justify-center md:justify-evenly mt-8 md:mt-16 p-4 md:p-0'>
-        {
-          result.length > 0 ? result.map((products) => (
-            <div key={products.id} className="flex justify-between gap-6">
-              <div><Image src={products.image} alt={products.name} className="w-96" />
-              </div>
-              <div>
-                Product Details
-                <p>Name {products.name}</p>
-                <p>Price {products.price}</p>
-                <p>Category {products.category}</p>
-              </div>
+    <div className='flex flex-wrap gap-y-10 py-6 px-40 mt-16'>
+      {result.length > 0 ? result.map((products) => (
+        <div key={products.id} className="flex justify-between gap-6">
+          <div>
+            <Image src={products.image} alt={products.name} className="w-96" />
+          </div>
+          <div>
+            <h1 className="text-2xl">{products.name}</h1>
+            <h2 className="text-base text-gray-400 font-semibold">{products.tagline}</h2>
+            <div>
+              <h3 className="text-xs mt-4 font-semibold ">SElECT SIZE</h3>
+              <div className="flex gap-x-3">
+              {sizes.map((item) => {
+                  return (
+                    
+                    <div className="w-6 h-6 mt-2 flex justify-center items-center duration-300 border rounded-full center hover:shadow-xl" >
+                      <span className="text-[10px] uppercase font-semibold text-center text-gray-600">
+                        {item}
+                      </span>
+                    </div>
+                   
+                  )
+                })
+              }
+               </div>
             </div>
-          )) : <p>No Products Found</p>
-        }
-      </div>
+            {/* <p>Price {products.price}</p>
+                <p>Category {products.category}</p> */}
+          </div>
+        </div>
+      )) : <p>No Products Found</p>
+      }
     </div>
   )
 };
