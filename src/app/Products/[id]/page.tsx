@@ -1,4 +1,7 @@
+import Quantity from "@/components/Quantity";
+import { Button } from "@/components/ui/button";
 import { products } from "@/ultils/mock"
+import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 
 const getProductsDetail = (id: number | string) => {
@@ -23,22 +26,29 @@ export default function Page({ params }: { params: { id: string } }) {
             <div>
               <h3 className="text-xs mt-4 font-semibold ">SElECT SIZE</h3>
               <div className="flex gap-x-3">
-              {sizes.map((item) => {
+                {sizes.map((item) => {
                   return (
-                    
-                    <div className="w-6 h-6 mt-2 flex justify-center items-center duration-300 border rounded-full center hover:shadow-xl" >
+
+                    <div className="w-6 h-6 mt-2 center duration-300 border rounded-full center hover:shadow-xl" >
                       <span className="text-[10px] uppercase font-semibold text-center text-gray-600">
                         {item}
                       </span>
                     </div>
-                   
+
                   )
                 })
-              }
-               </div>
+                }
+              </div>
+              <div className="flex gap-x-3 mt-6 items-center">
+                <h3 className="text-[10px] font font-semibold">Quantity:</h3>
+                <Quantity />
+              </div>
+              {/* Add to Cart */}
+              <div className="mt-5 flex items-center gap-x-4">
+                <Button className='bg-black'><ShoppingCart className='h-4 w-4 mr-2' />Add to Cart</Button>
+                <h2 className="text-2xl font-bold">${products.price.toFixed(2)}</h2>
+              </div>
             </div>
-            {/* <p>Price {products.price}</p>
-                <p>Category {products.category}</p> */}
           </div>
         </div>
       )) : <p>No Products Found</p>
