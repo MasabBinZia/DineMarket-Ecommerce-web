@@ -44,7 +44,7 @@ const Jewellery = () => {
                             <p style={{ wordSpacing: "0.8rem" }} className="h-[90%] lg:max-w-[15rem]">
                                 This piece is ethically crafted in our small family-owned workshop in Peru with unmatched attention to detail and care. The Natural color is the actual natural color of the fiber, undyed and 100% traceable.
                             </p>
-                            <Button className="bg-black">See All Products</Button>
+                            <Button className="bg-black ">See All Products</Button>
                         </div>
                     </div>
                 </div>

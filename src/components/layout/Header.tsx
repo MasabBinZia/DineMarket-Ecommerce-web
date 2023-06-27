@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import logo from '/public/logo.webp';
 import Link from 'next/link';
-import { Menu, X, Search,ShoppingCart } from "lucide-react";
+import { Menu, X, Search, ShoppingCart } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     setIsSearchOpen(false);
   };
-   const handleCategoryClick = () => {
+  const handleCategoryClick = () => {
     setIsMenuOpen(false);
   };
 
@@ -24,7 +24,7 @@ const Header = () => {
       <div className='flex justify-between items-center mt-8 mx-4 sm:mx-8 md:mx-16 lg:mx-32'>
         <div className='logo cursor-pointer'>
           <Link href={"/"}>
-          <Image src={logo} alt='logo' className='w-40' />
+            <Image src={logo} alt='logo' className='w-40' />
           </Link>
         </div>
         <div className='md:hidden'>
@@ -78,7 +78,7 @@ const Header = () => {
           className={`${isMenuOpen
             ? "fixed inset-0 z-50 bg-white transition-opacity duration-300 ease-in-out"
             : "hidden"
-          }`}
+            }`}
         >
           <div className="flex justify-between items-center h-16 px-4 sm:px-6">
             <div>

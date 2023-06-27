@@ -20,7 +20,7 @@ const ProductList = () => {
             img={products.image}
             category={products.category}
             id={products.id}
-             />
+          />
         ))}
       </div>
     </div>

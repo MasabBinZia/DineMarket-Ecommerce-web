@@ -10,7 +10,6 @@ const getProductsDetail = (id: number | string) => {
 
 const sizes = ["xs", "sm", "md", "lg", "xl"];
 
-
 export default function Page({ params }: { params: { id: string } }) {
   const result = getProductsDetail(params.id);
   return (

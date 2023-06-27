@@ -10,7 +10,6 @@ import P8 from "/public/p8.bmp";
 import P9 from "/public/p9.bmp";
 import P10 from "/public/p10.bmp";
 import P11 from "/public/p11.bmp";
-import P12 from "/public/p12.jpg";
 
 export const products: Product[] = [
   {

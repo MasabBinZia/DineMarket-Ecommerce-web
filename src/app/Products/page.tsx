@@ -14,10 +14,10 @@ const AllProducts = () => {
             key={products.id}
             tittle={products.name}
             price={products.price}
-            img={products.image} 
+            img={products.image}
             category={products.category}
             id={products.id}
-            />
+          />
         ))}
       </div>
     </div>
