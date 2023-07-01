@@ -75,10 +75,7 @@ const Header = () => {
         </div>
         {/* Mobile Devices */}
         <div
-          className={`${isMenuOpen
-            ? "fixed inset-0 z-50 bg-white transition-opacity duration-300 ease-in-out"
-            : "hidden"
-            }`}
+          className={`md:hidden ${isMenuOpen ? "fixed inset-0 z-50 bg-white transition-opacity duration-300 ease-in-out" : "hidden"}`}
         >
           <div className="flex justify-between items-center h-16 px-4 sm:px-6">
             <div>
