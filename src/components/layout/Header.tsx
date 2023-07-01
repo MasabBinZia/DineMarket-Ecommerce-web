@@ -71,11 +71,16 @@ const Header = () => {
           </div>
         </div>
         <div className={`hidden md:flex h-10 w-10 rounded-full bg-gray-200 justify-center items-center cursor-pointer`}>
+          <Link href={"/AddtoCart"}>
           <ShoppingCart />
+          </Link>
         </div>
         {/* Mobile Devices */}
         <div
-          className={`md:hidden ${isMenuOpen ? "fixed inset-0 z-50 bg-white transition-opacity duration-300 ease-in-out" : "hidden"}`}
+          className={`${isMenuOpen
+            ? "fixed inset-0 z-50 bg-white transition-opacity duration-300 ease-in-out"
+            : "hidden"
+            }`}
         >
           <div className="flex justify-between items-center h-16 px-4 sm:px-6">
             <div>
