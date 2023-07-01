@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
-import logo from 'public/logo.webp';
+import Logo from 'public/logo.webp';
 import Link from 'next/link';
 import { Menu, X, Search, ShoppingCart } from "lucide-react";
 
@@ -24,7 +24,7 @@ const Header = () => {
       <div className='flex justify-between items-center mt-8 mx-4 sm:mx-8 md:mx-16 lg:mx-32'>
         <div className='logo cursor-pointer'>
           <Link href={"/"}>
-            <Image src={logo} alt='logo' className='w-40' />
+            <Image src={Logo} alt='logo' className='w-40' />
           </Link>
         </div>
         <div className='md:hidden'>
@@ -84,7 +84,7 @@ const Header = () => {
         >
           <div className="flex justify-between items-center h-16 px-4 sm:px-6">
             <div>
-              <Image src={logo} alt='logo' className='w-32' />
+              <Image src={Logo} alt='logo' className='w-32' />
             </div>
             <div className="md:hidden">
               {isMenuOpen ? (
