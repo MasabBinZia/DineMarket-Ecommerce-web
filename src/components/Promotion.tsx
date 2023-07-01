@@ -13,11 +13,11 @@ const Promotion = () => {
         <p className="text-blue-800 text-sm font-bold">PROMOTIONS</p>
         <h1 className="text-3xl text-gray-800 font-bold">Our Promotions Events</h1>
       </div>
-      <div className='flex flex-row gap-4 item-center justify-center'>
+      <div className='flex flex-col md:flex md:flex-row gap-4 item-center justify-center'>
         {/* Left */}
-        <div className='flex flex-col gap-4'>
+        <div className='flex items-center md:flex flex-col gap-4'>
           {/*60% off*/}
-          <div className='h-50 w-[600px] px-8 flex flex-row rounded justify-between items-center bg-gray-300'>
+          <div className='w-[400px] md:h-50 md:w-[600px] px-8 flex flex-row rounded justify-between items-center bg-gray-300'>
             <div>
               <h2 className='block font-bold text-2xl'>GET UP TO <span className='text-4xl'>60%</span>
               </h2>
@@ -28,15 +28,16 @@ const Promotion = () => {
             </div>
           </div>
           {/*30% off*/}
-          <div className='h-52 w-[600px] flex flex-col items-center rounded justify-center gap-y-3 bg-zinc-800'>
+          <div className='w-[400px] md:h-52 md:w-[600px] flex flex-col items-center rounded justify-center gap-y-3 bg-zinc-800'>
             <h2 className='text-4xl text-white font-bold mt-8'>GET 30% OFF</h2>
             <p className='text-sm text-white'>USE PROMO CODE</p>
             <Button
-              className='text-lg tracking-widest text-white bg-zinc-700 px-4 py-1 rounded-lg hover:bg-zinc-700'>DINEWEEKENDSALE</Button>
+              className='mb-4 md:text-lg tracking-widest text-white bg-zinc-700 px-4 py-1 rounded-lg hover:bg-zinc-700'>DINEWEEKENDSALE</Button>
           </div>
         </div>
         {/* Right */}
-        <div className='flex flex-col justify-between items-center rounded  pb-0 pt-3 px-2 w-62' style={{ backgroundColor: '#efe1c7' }}>
+        <div className='flex flex-col justify-between items-center gap-4 md:flex md:flex-row'>
+        <div className='flex flex-col justify-between items-center rounded  pb-0 pt-3 px-2 w-80 md:w-56 h-[425px]' style={{ backgroundColor: '#efe1c7' }}>
           <div>
             <h2 className='text-md'>Flex Sweatshirt<br /></h2>
             <p><span className='text-md line-through'>$100.00</span><span
@@ -46,15 +47,16 @@ const Promotion = () => {
             <Image src={Promo2} alt='Promotion Girl' width={260} height={200} />
           </div>
         </div>
-        <div className='flex flex-col justify-between items-center rounded pb-0 pt-3 px-2 w-62 bg-gray-300'>
+        <div className='flex flex-col justify-between items-center rounded pb-0 pt-3 px-2 w-80 md:w-56 h-[425px] bg-gray-300'>
           <div>
             <h2 className={'text-md'}>Flex Push Button Bomber<br /></h2>
-            <p><span className='text-md line-through'>$225.00</span><span
+            <p><span className='text-md line-through text-center'>$225.00</span><span
               className='font-semibold ml-2'>$190.00</span></p>
           </div>
           <div className='Img'>
             <Image src={Promo3} alt={'Promotion Girl'} width={260} height={200} />
           </div>
+        </div>
         </div>
       </div>
     </div>
