@@ -25,10 +25,10 @@ export default function Page({ params }: { params: { id: string } }) {
             <div>
               <h3 className="text-xs mt-4 font-semibold ">SElECT SIZE</h3>
               <div className="flex gap-x-3">
-                {sizes.map((item) => {
+                {sizes.map((item,index) => {
                   return (
 
-                    <div className="w-6 h-6 mt-2 center duration-300 border rounded-full center hover:shadow-xl" >
+                    <div key={index} className="w-6 h-6 mt-2 center duration-300 border rounded-full center hover:shadow-xl" >
                       <span className="text-[10px] uppercase font-semibold text-center text-gray-600">
                         {item}
                       </span>
