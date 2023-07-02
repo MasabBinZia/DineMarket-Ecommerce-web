@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import logo from '/public/headerLogo.webp';
 import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "lucide-react"
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
             <div className="container px-5 py-24 mx-auto flex md:items-start text-start  lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                 <div className="space-y-6 w-64 flex-shrink-0 md:mx-0 mx-auto text-start md:text-left">
                     <Link href={"/"} className="flex title-font font-medium items-start md:justify-start justify-start text-gray-900">
-                        <Image width={150} height={150} src={"/Logo.webp"} alt="Logo" />
+                        <Image width={150} height={150} src={logo} alt="Logo" />
                     </Link>
                     <p className="mt-2">Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.</p>
                 </div>
