@@ -17,7 +17,7 @@ Dine Market is an e-commerce project developed for the PIAIC hackathon. It is a 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/dine-market.git
+git clone https://github.com/MasabBinZia/Hackthon-01-web-Ecommerce-web.git
 ```
 
 2. Navigate to the project directory:
