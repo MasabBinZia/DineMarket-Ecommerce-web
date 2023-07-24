@@ -58,7 +58,7 @@ const Header = () => {
             All Products
           </Link>
         </div>
-        <div className={`${isSearchOpen ? 'flex' : 'hidden'} md:flex items-center pt-0`}>
+        <div className={`${isSearchOpen ? 'flex' : 'hidden'} md:hidden lg:flex items-center pt-0`}>
           <div className="relative flex">
             <input
               type="search"
