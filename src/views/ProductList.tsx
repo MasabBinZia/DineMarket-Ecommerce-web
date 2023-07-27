@@ -11,7 +11,7 @@ const ProductList = () => {
         <p className="text-blue-800 text-sm font-bold">PRODUCTS</p>
         <h3 className="text-3xl text-gray-800 font-bold">Check What We Have</h3>
       </div>
-      <div className="flex flex-col items-center justify-center md:flex-row md:justify-evenly mt-8 md:mt-16 p-4 md:p-0">
+      <div className="flex flex-col items-center justify-center lg:flex-row lg:justify-evenly mt-8 lg:mt-16 p-4 lg:p-0 md:flex-row md:space-x-2">
         {productsChecks.map((products) => (
           <ProductCard
             key={products.id}
