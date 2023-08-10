@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 
 const Promotion = () => {
   return (
-    <div className="mt-8 ">
+    <div className="py-20">
       <div className="text-center flex flex-col mb-8 space-y-3">
         <p className="text-blue-800 text-sm font-bold">PROMOTIONS</p>
         <h1 className="text-3xl text-gray-800 font-bold">

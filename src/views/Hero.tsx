@@ -10,7 +10,7 @@ import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 const Hero = () => {
   return (
-    <div className="mt-8">
+    <div className="py-20">
       <section className="flex flex-col lg:flex-row gap-y-10 py-6 lg:px-12 md:px-8 px-4 ">
         {/* Left Side */}
         <div className="flex-1">

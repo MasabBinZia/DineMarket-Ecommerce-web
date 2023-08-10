@@ -9,7 +9,7 @@ const getProductsByCategory = (category: string) => {
 export default function Page({ params }: { params: { slug: string } }) {
   const result = getProductsByCategory(params.slug);
   return (
-    <div className="mt-8">
+    <div className="py-20 lg:px-20">
       <div className="text-center space-y-3">
         <h3 className="text-3xl text-gray-800 font-bold capitalize">
           {params.slug}

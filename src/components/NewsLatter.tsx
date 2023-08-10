@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 
 const Newslatter = () => {
   return (
-    <div className="relative text-center space-y-4 min-h-[40vh] md:h-[70vh] lg:min-h-[10rem] flex flex-col justify-center items-center text-gray-800">
+    <div className="relative text-center space-y-4 min-h-[40vh] md:h-[30vh] lg:min-h-[10rem] flex flex-col justify-center items-center text-gray-800">
       <h6 className="absolute text-6xl md:text-[9rem] font-bold text-gray-200 text-center mx-auto -z-50 ">
         Newsletter
       </h6>
