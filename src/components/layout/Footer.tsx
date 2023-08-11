@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "/public/headerLogo.webp";
+import { CompanyLinks } from "@/ultils/footerLinks";
+import { SupportLinks } from "@/ultils/footerLinks";
+import { ContactLinks } from "@/ultils/footerLinks";
 
 const Footer = () => {
   return (
@@ -24,27 +27,13 @@ const Footer = () => {
               Company
             </h2>
             <nav className="list-none mb-10 space-y-4">
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">About</a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  Terms of Use
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  How it Works
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">Contact Us</a>
-              </li>
+              {CompanyLinks.map((company) => (
+                <li key={company.id}>
+                  <a className="text-gray-600 hover:text-gray-800 cursor-pointer">
+                    {company.name}
+                  </a>
+                </li>
+              ))}
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -52,17 +41,13 @@ const Footer = () => {
               Support
             </h2>
             <nav className="list-none mb-10 space-y-4">
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  Support Carrer
-                </a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">24h Service</a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">Quick Chat</a>
-              </li>
+              {SupportLinks.map((support) => (
+                <li key={support.id}>
+                  <a className="text-gray-600 hover:text-gray-800 cursor-pointer">
+                    {support.name}
+                  </a>
+                </li>
+              ))}
             </nav>
           </div>
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
@@ -70,12 +55,13 @@ const Footer = () => {
               Contact
             </h2>
             <nav className="list-none mb-10 space-y-4">
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">Whatsapp</a>
-              </li>
-              <li>
-                <a className="text-gray-600 hover:text-gray-800">Support 24h</a>
-              </li>
+              {ContactLinks.map((contact) => (
+                <li key={contact.id}>
+                  <a className="text-gray-600 hover:text-gray-800 cursor-pointer">
+                    {contact.name}
+                  </a>
+                </li>
+              ))}
             </nav>
           </div>
         </div>

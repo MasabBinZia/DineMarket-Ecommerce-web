@@ -1,4 +1,4 @@
-import { products } from "@/ultils/mock";
+import { products } from "@/ultils/productMockData";
 import ProductCard from "@/components/ProductCard";
 import { StaticImageData } from "next/image";
 
