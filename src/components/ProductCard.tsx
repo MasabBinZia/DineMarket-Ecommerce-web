@@ -23,7 +23,7 @@ const ProductCard = (props: {
             {props.category}
           </span>
         </p>
-        <Link href={"/addtocart"}>
+        <Link href={"/AddtoCart"}>
         <Button className="bg-black">
           <ShoppingCart className="h-4 w-4 mr-2" />
           Add to Cart

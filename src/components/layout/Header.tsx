@@ -68,7 +68,7 @@ const Header = () => {
         <div
           className={`hidden md:flex h-10 w-10 rounded-full bg-gray-200 justify-center items-center cursor-pointer`}
         >
-          <Link href={"/addtocart"}>
+          <Link href={"/AddtoCart"}>
             <ShoppingCart />
           </Link>
         </div>
@@ -114,7 +114,7 @@ const Header = () => {
           </div>
           <div className="px-5 py-4 border-t border-gray-200">
             <div className="flex items-center">
-              <Link href={"/addtocart"} className="flex-shrink-0">
+              <Link href={"/AddtoCart"} className="flex-shrink-0">
                 <ShoppingCart className="h-6 w-6 text-gray-500" />
               </Link>
               <div className="ml-3">
