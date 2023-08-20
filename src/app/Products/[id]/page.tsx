@@ -25,28 +25,27 @@ export default function Page({ params }: { params: { id: string } }) {
               />
             </div>
             <div>
-              <h1 className="text-2xl">{products.name}</h1>
+              <h1 className="text-2xl font-bold">{products.name}</h1>
               <h2 className="text-base text-gray-400 font-semibold">
                 {products.tagline}
               </h2>
               <div>
-                <h3 className="text-xs mt-4 font-semibold ">SElECT SIZE</h3>
+                <h3 className="text-lg mt-4 font-semibold ">Select Size:</h3>
                 <div className="flex gap-x-3">
                   {sizes.map((item, index) => {
                     return (
-                      <div
-                        key={index}
-                        className="w-6 h-6 mt-2 center duration-300 border rounded-full center hover:shadow-xl"
-                      >
-                        <span className="text-[10px] uppercase font-semibold text-center text-gray-600">
+                      <label key={index} className="">
+                        <input type="checkbox" className="hidden peer" />
+                        <span className=" mt-2 center duration-300 border rounded-full center hover:shadow-xl flex items-center justify-center cursor-pointer w-10 h-10 text-[15px] uppercase font-semibold text-center text-gray-600 peer-checked:bg-black peer-checked:text-white ">
                           {item}
                         </span>
-                      </div>
+                      </label>
                     );
                   })}
                 </div>
+
                 <div className="flex gap-x-3 mt-6 items-center">
-                  <h3 className="text-[10px] font font-semibold">Quantity:</h3>
+                  <h3 className="text-lg  font-semibold">Quantity:</h3>
                   <Quantity />
                 </div>
                 {/* Add to Cart */}

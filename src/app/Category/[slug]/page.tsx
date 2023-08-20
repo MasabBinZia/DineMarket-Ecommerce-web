@@ -1,6 +1,5 @@
 import { products } from "@/ultils/productMockData";
 import ProductCard from "@/components/ProductCard";
-import { StaticImageData } from "next/image";
 
 const getProductsByCategory = (category: string) => {
   return products.filter((product) => product.category === category);
@@ -15,7 +14,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           {params.slug}
         </h3>
       </div>
-      <div className="flex flex-wrap md:flex-row justify-center md:justify-evenly mt-8 md:mt-16 p-4 md:p-0">
+      <div className="grid md:grid-cols-[auto,auto] lg:grid-cols-[auto,auto,auto,auto] gap-x-20 justify-center mt-8 md:mt-16 p-4 md:p-0">
         {result.length > 0 ? (
           result.map((products) => (
             <ProductCard

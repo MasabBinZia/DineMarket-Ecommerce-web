@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import ProductCard from "@/components/ProductCard";
 import { products } from "@/ultils/productMockData";
 
+const Product = products.slice(0, 8);
+
 export class ProductList extends Component {
   render() {
     const settings = {
@@ -65,7 +67,7 @@ export class ProductList extends Component {
           arrows={false}
           className="flex items-stretch justify-items-stretch px-12 "
         >
-          {products.map((pro) => (
+          {Product.map((pro) => (
             <ProductCard
               key={pro.id}
               tittle={pro.name}
