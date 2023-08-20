@@ -1,4 +1,3 @@
-import React from "react";
 import ProductPage from "./productPage";
 
 const AllProducts = () => {
