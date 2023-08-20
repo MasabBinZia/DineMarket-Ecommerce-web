@@ -24,10 +24,12 @@ const Hero = () => {
             Anyone can beat you but no one can beat your outfit as long as you
             <br /> wear Dine outfits.
           </p>
-          <Button className="bg-black h-12 px-8 mt-4">
-            <ShoppingCart className="mr-2" />
-            Start Shopping
-          </Button>
+          <a href={"/Products"}>
+            <Button className="bg-black h-12 px-8 mt-4">
+              <ShoppingCart className="mr-2" />
+              Start Shopping
+            </Button>
+          </a>
           <div className="flex space-x-3 mt-16  items-center">
             <Image className="lg:w-38 md:w-24 w-16" src={Featured1} alt="img" />
             <Image className="lg:w-38 md:w-24 w-16" src={Featured2} alt="img" />

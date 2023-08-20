@@ -23,10 +23,12 @@ const ProductCard = (props: {
             {props.category}
           </span>
         </p>
+        <Link href={"/addtocart"}>
         <Button className="bg-black">
           <ShoppingCart className="h-4 w-4 mr-2" />
           Add to Cart
         </Button>
+        </Link>
       </div>
     </Link>
   );

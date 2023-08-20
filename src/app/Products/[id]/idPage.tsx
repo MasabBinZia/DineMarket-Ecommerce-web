@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import { useAppSelector } from "@/app/store/hooks";
+import Link from "next/link";
 
 const sizes = ["xs", "sm", "md", "lg", "xl"];
 
@@ -51,10 +52,12 @@ const IdPage = ({ params }: { params: { id: string | number } }) => {
                 </div>
                 {/* Add to Cart */}
                 <div className="mt-5 flex items-center gap-x-4">
-                  <Button className="bg-black">
-                    <ShoppingCart className="h-4 w-4 mr-2" />
-                    Add to Cart
-                  </Button>
+                  <Link href={"/addtocart"}>
+                    <Button className="bg-black">
+                      <ShoppingCart className="h-4 w-4 mr-2" />
+                      Add to Cart
+                    </Button>
+                  </Link>
                   <h2 className="text-2xl font-bold">
                     ${products.price.toFixed(2)}
                   </h2>
