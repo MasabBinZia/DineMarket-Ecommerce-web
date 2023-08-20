@@ -1,12 +1,10 @@
-import { products } from "@/ultils/productMockData";
+"use client";
 import ProductCard from "@/components/ProductCard";
-
-const getProductsByCategory = (category: string) => {
-  return products.filter((product) => product.category === category);
-};
+import { useAppSelector } from "@/app/store/hooks";
 
 export default function Page({ params }: { params: { slug: string } }) {
-  const result = getProductsByCategory(params.slug);
+  const pro = useAppSelector((state) => state.products);
+  const result = pro.filter((val) => val.category == params.slug);
   return (
     <div className="py-20 lg:px-20">
       <div className="text-center space-y-3">

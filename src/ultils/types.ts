@@ -11,6 +11,18 @@ export type Product = {
   image: StaticImageData;
 };
 
+export type Cart = {
+  id: number;
+  name: string;
+  tagline: string;
+  price: number;
+  category: string;
+  image: StaticImageData;
+  discount?:number;
+  qty:number;
+  slug:string;
+};
+
 /*NavBar Types */
 
 export type NavLink = {
