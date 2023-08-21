@@ -9,6 +9,9 @@ export type Product = {
   price: number;
   category: string;
   image: StaticImageData;
+  discount?: number;
+  qty: number;
+  slug: string;
 };
 
 export type Cart = {
@@ -18,11 +21,10 @@ export type Cart = {
   price: number;
   category: string;
   image: StaticImageData;
-  discount?:number;
-  qty:number;
-  slug:string;
+  discount?: number | undefined;
+  qty: number;
+  slug: string;
 };
-
 /*NavBar Types */
 
 export type NavLink = {

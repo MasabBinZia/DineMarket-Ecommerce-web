@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Quantity from "@/components/Quantity";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
@@ -13,6 +13,17 @@ const IdPage = ({ params }: { params: { id: string | number } }) => {
   const Product_id = params.id;
   const products = useAppSelector((state) => state.products);
   const id = products.filter((val) => val.id == Product_id);
+  const [cartItem, setCartItem] = useState({
+    id: id[0].id,
+    name: id[0].name,
+    tagline: id[0].tagline,
+    price: id[0].price,
+    category: id[0].category,
+    image: id[0].image,
+    discount: id[0].discount,
+    qty: id[0].qty,
+    slug: id[0].slug,
+  });
 
   return (
     <div className="flex flex-wrap gap-y-10 py-6 px-40 mt-16">
@@ -48,7 +59,36 @@ const IdPage = ({ params }: { params: { id: string | number } }) => {
 
                 <div className="flex gap-x-3 mt-6 items-center">
                   <h3 className="text-lg  font-semibold">Quantity:</h3>
-                  <Quantity />
+                  {/* <Quantity /> */}
+                  <p></p>
+                  <div className="flex gap-x-2 items-center">
+                    {/* Minus */}
+                    <button
+                      className="hover:bg-black hover:text-white flex justify-center items-center text-[15px] font-bold border  h-10 w-10 rounded-full hover:cursor-pointer"
+                      onClick={() =>
+                        setCartItem((prevCartItem) => ({
+                          ...prevCartItem,
+                          qty: Math.max(prevCartItem.qty - 1, 1),
+                        }))
+                      }
+                    >
+                      -
+                    </button>
+                    {/* Number */}
+                    <span className="text-xl px-4">{cartItem.qty}</span>
+                    {/* Plus */}
+                    <button
+                      className="hover:bg-black hover:text-white flex justify-center items-center text-[15px] font-bold border  h-10 w-10 rounded-full hover:cursor-pointer"
+                      onClick={() =>
+                        setCartItem((prevCartItem) => ({
+                          ...prevCartItem,
+                          qty: prevCartItem.qty + 1,
+                        }))
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
                 </div>
                 {/* Add to Cart */}
                 <div className="mt-5 flex items-center gap-x-4">
@@ -59,7 +99,7 @@ const IdPage = ({ params }: { params: { id: string | number } }) => {
                     </Button>
                   </Link>
                   <h2 className="text-2xl font-bold">
-                    ${products.price.toFixed(2)}
+                    ${cartItem.price * cartItem.qty}
                   </h2>
                 </div>
               </div>
